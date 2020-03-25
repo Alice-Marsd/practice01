@@ -1,39 +1,20 @@
-#include<stdio.h>
-#include<stack>
-typedef struct stack
-{
-	int *top;
-	int maxsize;
-}Stack;
-int compare(char* origin,char *result)
-{
-	if(origin==NULL||result==NULL)
-	return 0;
-	int i=0;
-	int *p;
-	Stack temp;
-	while(origin[i]||result[i])
-	{
-		if(origin[i]==result[i])
-			++i;
-		else{
-			if(temp.top!=origin[i])
-			{	
-				temp.
-				count++;
-			}else{
-				temp.push(i);
-			}
-			
-		}
-	}
-	return count;
-}
-int main()
-{
-	char origin[1000000],result[1000000];
-	int count=0;
-	scanf("%s",&origin);
-	scanf("%s",&result);
-	count=compare(origin,result);
+#include<iostream>
+using namespace std;
+int main(){
+    string ori,tar;
+    cin>>ori;
+    cin>>tar;
+    int N=ori.length();
+    int num1=0,num2=0;
+    for(int i=0;i<N;i++){
+        if(ori[i]=='A' && tar[i]=='T'){
+            num1++;
+        }
+        if(ori[i]=='T' && tar[i]=='A'){
+            num2++;
+        }
+    }
+    int result=num1>num2?num1:num2;
+    cout<<result<<endl;
+    return 0;
 }
