@@ -1,5 +1,6 @@
 #include<iostream>
 #include<cstring>
+//本质是对有限数字位的0-9数字的排列组合 
 using namespace std;
 void PrintNumber(char* numbers)
 {
@@ -14,17 +15,18 @@ void PrintNumber(char* numbers)
 	}
 	printf("\t");
 }
-void PrintTOMaxOfNDigitsRecursively(char* numbers,int length,int index)
+void PrintTOMaxOfNDigitsRecursively(char* number,int length,int index)
 {
-	if(index==length-1)
+	//递归产生后边的每位数字 
+	if(index == length-1)
 	{
-		PrintNumber(numbers);
+		PrintNumber(number);
 		return;
 	}
 	for(int i=0;i<10;++i)
 	{
-		numbers[index+1]=i+'0';
-		PrintTOMaxOfNDigitsRecursively(numbers,length,index+1);
+		number[index+1]=i+'0';
+		PrintTOMaxOfNDigitsRecursively(number,length,index+1);
 	}
 	
 }
@@ -36,7 +38,7 @@ void PrintToMaxDigital(int num)
 	number[num]='\0';
 	for(int i=0;i<10;++i)
 	{
-		number[i]=i+'0';
+		number[0]=i+'0';//这里是第0号数字的控制！！！ 
 		PrintTOMaxOfNDigitsRecursively(number,num,0);
 	}
 	delete []number;
