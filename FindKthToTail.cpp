@@ -1,5 +1,5 @@
 #include<iostream>
-#define N  3
+#define N  7
 #include <E:\fan\createlink.h>
 using namespace std;
 
@@ -30,5 +30,5 @@ int main()
 	int a[]={1,2,3,4,5,6};
 	elemsn *head=createlink(a) ;
 	printlink(head);
-	cout<<FindKthToTail(head,3)<<endl;
+	cout<<FindKthToTail(head,3)->data<<endl;
 }
