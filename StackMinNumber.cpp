@@ -25,7 +25,7 @@ template<typename T> class StackWithMin
 template<typename T> void StackWithMin<T>::push(const T& value)
 {
 	m_data.push(value);
-	if(m_min.size()==0 || value == m_min.top())
+	if(m_min.size()==0 || value < m_min.top())
 	m_min.push(value);
 	else
 	m_min.push(m_min.top());
