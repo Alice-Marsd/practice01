@@ -40,6 +40,6 @@ bool isPopOrder(int *push,int *pop,int length)
 int main()
 {
 	int push[]={1,2,3,4,5};
-	int pop[]={5,4,3,2,1};
+	int pop[]={4,5,2,3,1};
 	cout <<isPopOrder(push,pop,5)<<endl;
 }
