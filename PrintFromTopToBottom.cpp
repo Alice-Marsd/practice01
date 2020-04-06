@@ -19,9 +19,7 @@ void PrintInline(ptree root)
 		dequeTreeNode.push_back(pNode->left);
 		if(pNode->right)
 		dequeTreeNode.push_back(pNode->right);
-	}
-	
-	
+	}	
 }
 int main()
 {
