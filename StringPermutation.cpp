@@ -15,11 +15,8 @@ void Permutation(char* pstr,char* pBegin)
 			temp=*pCH;
 			*pCH=*pBegin;
 			*pBegin=temp;
-		}
-		
+		}	
 	}
-	
-	
 }
 void Permutation(char* str)
 {
