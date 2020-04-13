@@ -48,7 +48,6 @@ int FindGreatestSumOfSubArray2(int* data,int n)
 		maxi=max[i];
 	}
 	return maxi;
-	
 }
 int main()
 {
